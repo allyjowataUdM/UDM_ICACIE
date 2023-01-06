@@ -5,10 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Sightseeing and Travel - UDM ICACIE</title>
 </head>
 <body>
-    <header>
+    <header class="header_home">
+        <div class="title_home">
+            <div class="icacie_logo"><img src="images/logo-icacie.png" alt="icacie logo"></div>
+            <div class="header_text">
+                <h2>8th International Conference on
+                Advanced Computing and Intelligent Engineering [ICACIE 2023]</h2>
+                <h4>Université des Mascareignes</h4> 
+                <p>Beau Plan, Pamplemousses, Mauritius</p>
+            </div>
+            <div class="udm_logo"><img src="images/udm-logo.png" alt="udm logo"></div>
+        </div>
         <nav class="navbar">
             <ul>
                 <li><a href="Index.html">Home</a></li>
@@ -17,12 +28,34 @@
                 <li><a href="Travel.html">Travel</a></li>
             </ul>
         </nav>
+        <div class="topnav">
+            <div id="myLinks">
+                <a href="Index.html">Home</a>
+                <a href="Keynotes.html">Keynotes</a>
+                <a href="Accommodation.html">Accommodation</a>
+                <a href="Travel.html">Travel</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
     </header>
     <main>
-
+        
     </main>
     <footer>
 
     </footer>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+        x.style.display = "none";
+        } else {
+        x.style.display = "block";
+        }
+    }
+</script>
 </body>
 </html>

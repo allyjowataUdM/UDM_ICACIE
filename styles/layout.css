@@ -1,8 +1,10 @@
 .header_home{
-    height: 50rem;
+    height: auto;
     background-color: var(--C2);
 }
-
+.topnav{
+    display: none;
+}
 .navbar{
     display: flex;
     flex-direction: row;
@@ -11,7 +13,6 @@
     position: sticky;
     top: 0;
     height: 5rem;
-    width: 100vw;
     background-color: var(--C1);
 }
 
@@ -28,13 +29,16 @@
     text-decoration: none;
     color: rgb(255, 255, 255);
     margin: 3rem;
-    padding: 0.5rem;
+    padding: 1.5rem;
     font-size: 2rem;
     font-weight: 600;
 }
 
-.logo{
-    width: 100vw;
+.navbar ul li a:hover{
+    background-color: var(--C2);
+}
+
+.title_home{
     display: flex;
     justify-content: center;
 }
@@ -50,4 +54,88 @@
     width: auto;
     margin: 3rem;
     
+}
+.header_text h2{
+    font-size: 2.5rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 2rem;
+}
+
+.header_text h4{
+    font-size: 2.3rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.header_text p{
+    font-size: 1.7rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 0 0 1.5rem 0;
+}
+
+@media only screen and (max-width: 975px) {
+    .title_home{
+        flex-direction: column;
+    }
+
+    .udm_logo{
+        text-align: center;
+    }
+
+    .icacie_logo{
+        text-align: center;
+    }
+
+    .navbar{
+        display: none;
+    }
+    .topnav{
+        display: contents;
+    }
+}
+
+
+.topnav {
+    overflow: hidden;
+    background-color: var(--C1);
+    position: sticky;
+    top: 0;
+  }
+  
+.topnav #myLinks {
+    display: none;
+    background-color: var(--C1);
+}
+  
+.topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+  
+.topnav a.icon {
+    background: var(--C1);
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+  
+.topnav a:hover {
+    background-color: var(--C2);
+    color: white;
+}
+  
+.active {
+    background-color: var(--C1);
+    color: white;
+}
+
+main{
+    background-color: blue;
+    height: 150rem;
 }
