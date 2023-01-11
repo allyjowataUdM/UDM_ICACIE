@@ -1,24 +1,23 @@
 .header_home{
-    height: auto;
     background-color: var(--C2);
 }
+
 .topnav{
     display: none;
 }
+
 .navbar{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: sticky;
-    top: 0;
     height: 5rem;
     background-color: var(--C1);
+    position: sticky;
+    top: 0;
 }
 
 .navbar ul{
     display: flex;
-    flex-direction: row;
 }
 
 .navbar ul li {
@@ -40,7 +39,7 @@
 
 .title_home{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .udm_logo img{
@@ -55,6 +54,7 @@
     margin: 3rem;
     
 }
+
 .header_text h2{
     font-size: 2.5rem;
     text-align: center;
@@ -136,6 +136,99 @@
 }
 
 main{
-    background-color: blue;
+    background-color: lightgray;
     height: 150rem;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: 25% 25% 25%;
+    background-color: #fff;
+    color: #444;
+    padding: 3rem;
+}
+
+.box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+
+}
+
+.a {
+    grid-column: 1 / span 2;
+}
+
+.b {
+    grid-column: 3 ;
+    grid-row: 1 / span 2;
+}
+
+.c {
+    grid-column: 1 ;
+    grid-row: 2 ;
+}
+
+.d {
+    grid-column: 2 ;
+    grid-row: 2 ;
+}
+
+.menu {
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+  
+.menu a {
+    background-color: #e5e5e5;
+    padding: 8px;
+    margin-top: 7px;
+    display: block;
+    width: 100%;
+    color: black;
+}
+  
+.main {
+    float: left;
+    width: 60%;
+    padding: 0 20px;
+}
+  
+.right {
+    background-color: #e5e5e5;
+    float: left;
+    width: 20%;
+    padding: 15px;
+    margin-top: 7px;
+    text-align: center;
+}
+  
+@media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    .menu, .main, .right {
+      width: 100%;
+    }
+}
+
+.footer_content1{
+    background-color: black;
+    height: 107rem;
+}
+
+.footer_content{
+    background-color: hotpink;
+    height: 7rem;
+    position: sticky;
+    top: 0;
+}
+
+.tryme{
+    background-color: hotpink;
+    height: 7rem;
+    position: sticky;
+    top: 0;
 }
