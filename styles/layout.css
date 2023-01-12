@@ -2,10 +2,6 @@
     background-color: var(--C2);
 }
 
-.topnav{
-    display: none;
-}
-
 .navbar{
     display: flex;
     justify-content: center;
@@ -16,63 +12,14 @@
     top: 0;
 }
 
-.navbar ul{
-    display: flex;
-}
-
-.navbar ul li {
-    list-style-type: none;
-}
-
-.navbar ul li a{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    margin: 3rem;
-    padding: 1.5rem;
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-.navbar ul li a:hover{
-    background-color: var(--C2);
+.topnav{
+    display: none;
 }
 
 .title_home{
     display: flex;
     justify-content: space-between;
-}
-
-.udm_logo img{
-    height: 7rem;
-    width: auto;
-    margin: 3rem;
-}
-
-.icacie_logo img{
-    height: 7rem;
-    width: auto;
-    margin: 3rem;
-    
-}
-
-.header_text h2{
-    font-size: 2.5rem;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    padding: 2rem;
-}
-
-.header_text h4{
-    font-size: 2.3rem;
-    text-align: center;
-    color: rgb(255, 255, 255);
-}
-
-.header_text p{
-    font-size: 1.7rem;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    padding: 0 0 1.5rem 0;
+    align-items: center;
 }
 
 @media only screen and (max-width: 975px) {
@@ -102,79 +49,20 @@
     background-color: var(--C1);
     position: sticky;
     top: 0;
-  }
-  
-.topnav #myLinks {
-    display: none;
-    background-color: var(--C1);
 }
-  
-.topnav a {
-    color: white;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-}
-  
-.topnav a.icon {
-    background: var(--C1);
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-  
-.topnav a:hover {
-    background-color: var(--C2);
-    color: white;
-}
-  
+
+
 .active {
     background-color: var(--C1);
     color: white;
 }
 
-main{
-    background-color: lightgray;
-    height: 150rem;
-}
-
-.wrapper {
-    display: grid;
-    grid-gap: 5rem;
-    grid-template-columns: 25% 25% 25%;
-    background-color: #fff;
-    color: #444;
-    padding: 3rem;
-}
-
-.box {
-    background-color: #444;
-    color: #fff;
-    border-radius: 5px;
-    padding: 20px;
-    font-size: 150%;
-
-}
-
-.a {
-    grid-column: 1 / span 2;
-}
-
-.b {
-    grid-column: 3 ;
-    grid-row: 1 / span 2;
-}
-
-.c {
-    grid-column: 1 ;
-    grid-row: 2 ;
-}
-
-.d {
-    grid-column: 2 ;
-    grid-row: 2 ;
+.main-background{
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('../images/udm-background3.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100vh;
 }
 
 .menu {
@@ -193,6 +81,7 @@ main{
 }
   
 .main {
+    color: white;
     float: left;
     width: 60%;
     padding: 0 20px;
@@ -212,6 +101,7 @@ main{
     .menu, .main, .right {
       width: 100%;
     }
+    
 }
 
 .footer_content1{
@@ -220,13 +110,6 @@ main{
 }
 
 .footer_content{
-    background-color: hotpink;
-    height: 7rem;
-    position: sticky;
-    top: 0;
-}
-
-.tryme{
     background-color: hotpink;
     height: 7rem;
     position: sticky;
