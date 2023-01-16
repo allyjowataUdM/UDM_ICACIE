@@ -50,7 +50,7 @@
 .content_main{
     display: flex;
     flex-direction: column;
-    padding: 6.2rem;
+    padding: 3rem 6.2rem;
     margin: 5rem 0;
     background: rgba(255, 255, 255, 0.136);
     border-radius: 16px;
@@ -82,6 +82,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 8rem;
+    padding: 4rem 0;
     z-index: 10;
     animation: transitionFadeIn 1500ms ease;
 }
@@ -159,8 +161,7 @@
     -webkit-backdrop-filter: blur(5px);
     text-align: center;
     overflow: hidden;
-    width: min-content;
-    
+    width: 23rem;
 }
 
 .card_keynotes a{
@@ -265,6 +266,102 @@
 }
   
 .card_keynotes .social li a:hover {
-    color: var(--C1);
+    color: var(--C2);
     background-color: #f7f5ec;
+}
+
+
+.ticker-wrapper-h{
+	display: flex;	
+	overflow: hidden;
+    background-color: var(--C2);
+}
+
+.ticker-wrapper-h .heading{
+	background-color: #1c6547;
+	color: #fff;
+	padding: 6px 10px;
+	flex: 0 0 auto;
+	z-index: 500;
+}
+
+.news-ticker-h{
+	display: flex;
+	padding-left: 90%;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-name: tic-h;
+	animation-duration: 30s;
+	
+}
+
+.news-ticker-h:hover { 
+	animation-play-state: paused; 
+}
+
+.ticker-wrapper-h .heading{
+    font-weight: bold;
+}
+
+.news-ticker-h li{
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	padding-left: 20px;
+}
+
+@keyframes tic-h {
+	0% {
+		transform: translate3d(0, 0, 0);
+		visibility: visible;
+	}
+	100% {
+		transform: translate3d(-100%, 0, 0);
+	}
+}
+
+
+.modalDialog {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    opacity:0;
+    transition: opacity 100ms ease-in;
+    pointer-events: none;
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 3px;
+    background: #fff;
+}
+.close {
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(225, 37, 37);
+    color: #fff;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 70px;
+    height: 34px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 15%;
+    padding-top: 5px;
+}
+.close:hover {
+    background: rgb(248, 49, 49);
 }
