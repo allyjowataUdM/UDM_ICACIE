@@ -10,6 +10,7 @@
     background-color: var(--C1);
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 .topnav{
@@ -20,27 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-@media only screen and (max-width: 975px) {
-    .title_home{
-        flex-direction: column;
-    }
-
-    .udm_logo{
-        text-align: center;
-    }
-
-    .icacie_logo{
-        text-align: center;
-    }
-
-    .navbar{
-        display: none;
-    }
-    .topnav{
-        display: contents;
-    }
+    height: 20rem;
 }
 
 
@@ -61,52 +42,54 @@
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('../images/udm-background3.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size:cover;
-    height: 100vh;
+    background-size: cover;
+    padding: 1rem 25rem;
 }
 
-.menu {
-    float: left;
-    width: 20%;
-    text-align: center;
+
+.content_main{
+    display: flex;
+    flex-direction: column;
+    padding: 6.2rem;
+    margin: 5rem 0;
+    background: rgba(255, 255, 255, 0.136);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 10;
+    animation: transitionFadeIn 1500ms ease;
+
 }
-  
-.menu a {
-    background-color: #e5e5e5;
-    padding: 8px;
-    margin-top: 7px;
-    display: block;
-    width: 100%;
-    color: black;
-}
-  
-.main {
+
+.content_main h2{
     color: white;
-    float: left;
-    width: 60%;
-    padding: 0 20px;
+    font-size: 4rem;
+    padding: 1rem;
+    animation: transitionFadeIn 1500ms ease;  
 }
-  
-.right {
-    background-color: #e5e5e5;
-    float: left;
-    width: 20%;
-    padding: 15px;
-    margin-top: 7px;
-    text-align: center;
+
+.content_main p{
+    color: white;
+    font-size: 1.8rem;
+    padding: 1rem;
+    text-align: justify;
+    animation: transitionFadeIn 1500ms ease-in;
+
 }
-  
-@media only screen and (max-width: 620px) {
-    /* For mobile phones: */
-    .menu, .main, .right {
-      width: 100%;
-    }
-    
+
+.content_keynotes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 10;
+    animation: transitionFadeIn 1500ms ease;
 }
 
 .footer_content1{
-    background-color: black;
-    height: 107rem;
+    background-color: rgba(255, 255, 255, 0.136);
+    height: 207rem;
+    padding: 5rem;
 }
 
 .footer_content{
@@ -114,4 +97,174 @@
     height: 7rem;
     position: sticky;
     top: 0;
+    z-index: 1001;
+}
+
+@media only screen and (max-width: 975px) {
+    .title_home{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .udm_logo{
+        text-align: center;
+    }
+
+    .icacie_logo{
+        text-align: center;
+    }
+
+    .navbar{
+        display: none;
+    }
+    .topnav{
+        display: contents;
+    }
+    .main-background{
+        padding: 1rem;
+    }
+    .content_main{
+        padding: 2rem;
+    }
+}
+
+@keyframes transitionSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  
+@keyframes transitionFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.card_keynotes {
+    padding: 30px;
+    margin: 30px;
+    background: rgba(255, 255, 255, 0.136);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    text-align: center;
+    overflow: hidden;
+    width: min-content;
+    
+}
+
+.card_keynotes a{
+    text-decoration: none;
+}
+  
+.card_keynotes .picture {
+    display: inline-block;
+    height: 130px;
+    width: 130px;
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+}
+  
+.card_keynotes .picture::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: var(--C2);
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+}
+  
+.card_keynotes:hover .picture::before {
+    height: 100%;
+}
+  
+.card_keynotes .picture::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--C2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+  
+.card_keynotes .picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+}
+  
+.card_keynotes:hover .picture img {
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.7);
+}
+  
+.card_keynotes .title {
+    display: block;
+    font-size: 15px;
+    color: var(--C0);
+    text-transform: capitalize;
+    font-weight: 500;
+    
+}
+
+.card_keynotes .name {
+    color: white;
+    font-size: 22px;
+    padding: 1rem 0;
+    
+}
+  
+.card_keynotes .social {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: var(--C2);
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+  
+.card_keynotes:hover .social {
+    bottom: 0;
+}
+  
+.card_keynotes .social li {
+    display: inline-block;
+}
+  
+.card_keynotes .social li a {
+    display: block;
+    padding: 10px;
+    font-size: 17px;
+    color: white;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+}
+  
+.card_keynotes .social li a:hover {
+    color: var(--C1);
+    background-color: #f7f5ec;
 }
