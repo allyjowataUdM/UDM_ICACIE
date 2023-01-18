@@ -12,6 +12,7 @@
 }
 
 .navbar ul li a{
+    font-family: "Century Gothic";
     text-decoration: none;
     color: rgb(255, 255, 255);
     margin: 0rem 1.5rem;

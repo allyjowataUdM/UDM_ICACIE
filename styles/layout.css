@@ -18,6 +18,7 @@
 }
 
 .title_home{
+    font-family: "Century Gothic";
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,21 +57,41 @@
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     z-index: 10;
     animation: transitionFadeIn 1500ms ease;
+    transition: all 1s linear 0s;
+}
 
+.content_main a{
+    text-decoration: none;
+}
+
+.content_main a:hover{
+    text-decoration-line: underline;
+    text-decoration-color: whitesmoke;
+}
+
+.content_main:hover{
+    backdrop-filter: blur(10px);
+}
+
+.content_main h3{
+    color: whitesmoke;
+    font-size: 2rem;
+    padding: 0 1rem;
+    animation: transitionFadeIn 1500ms ease;  
 }
 
 .content_main h2{
-    color: white;
+    font-family: "Century Gothic";
+    color: whitesmoke;
     font-size: 4rem;
     padding: 1rem;
     animation: transitionFadeIn 1500ms ease;  
 }
 
 .content_main p{
-    color: white;
+    color: rgb(210, 210, 210);
     font-size: 1.8rem;
     padding: 1rem;
     text-align: justify;
@@ -86,6 +107,94 @@
     padding: 4rem 0;
     z-index: 10;
     animation: transitionFadeIn 1500ms ease;
+}
+
+.content_venue, .content_travel{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 6.2rem;
+    margin: 5rem 0;
+    background: rgba(255, 255, 255, 0.136);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    z-index: 10;
+    animation: transitionFadeIn 1500ms ease;
+    transition: all 1s linear 0s;
+}
+
+.content_venue a{
+    text-decoration: none;
+}
+
+.content_venue a:hover{
+    text-decoration-line: underline;
+    text-decoration-color: var(--C4);
+}
+
+.content_venue:hover{
+    backdrop-filter: blur(10px);
+}
+
+.content_venue h3{
+    color: var(--C4);
+    font-size: 2rem;
+    padding: 0 1rem;
+    animation: transitionFadeIn 1500ms ease;  
+}
+
+.content_venue h2{
+    font-family: "Century Gothic";
+    color: whitesmoke;
+    font-size: 4rem;
+    padding: 1rem;
+    animation: transitionFadeIn 1500ms ease;  
+}
+
+.content_venue p{
+    color: rgb(210, 210, 210);
+    font-size: 1.8rem;
+    padding: 1rem;
+    text-align: justify;
+    animation: transitionFadeIn 1500ms ease-in;
+
+}
+
+.content_travel a{
+    text-decoration: none;
+}
+
+.content_travel a:hover{
+    text-decoration-line: underline;
+    text-decoration-color: var(--C4);
+}
+
+.content_travel:hover{
+    backdrop-filter: blur(10px);
+}
+
+.content_travel h3{
+    color: var(--C4);
+    font-size: 2rem;
+    padding: 0 1rem;
+    animation: transitionFadeIn 1500ms ease;  
+}
+
+.content_travel h2{
+    font-family: "Century Gothic";
+    color: whitesmoke;
+    font-size: 4rem;
+    padding: 1rem;
+    animation: transitionFadeIn 1500ms ease;  
+}
+
+.content_travel p{
+    color: rgb(210, 210, 210);
+    font-size: 1.8rem;
+    padding: 1rem;
+    text-align: justify;
+    animation: transitionFadeIn 1500ms ease-in;
+
 }
 
 .footer_content1{
@@ -125,7 +234,7 @@
     .main-background{
         padding: 1rem;
     }
-    .content_main{
+    .content_main, .content_venue{
         padding: 2rem;
     }
 }
@@ -162,6 +271,11 @@
     text-align: center;
     overflow: hidden;
     width: 23rem;
+    transition: all 3s linear 0s;
+}
+
+.card_keynotes:hover{
+    backdrop-filter: blur(10px);
 }
 
 .card_keynotes a{
@@ -222,6 +336,7 @@
 }
   
 .card_keynotes .title {
+
     display: block;
     font-size: 15px;
     color: var(--C0);
@@ -231,7 +346,8 @@
 }
 
 .card_keynotes .name {
-    color: white;
+    font-family: "Century Gothic";
+    color: whitesmoke;
     font-size: 22px;
     padding: 1rem 0;
     
@@ -278,6 +394,7 @@
 }
 
 .ticker-wrapper-h .heading{
+    font-family: "Century Gothic";
 	background-color: #1c6547;
 	color: #fff;
 	padding: 6px 10px;
@@ -292,7 +409,6 @@
 	animation-timing-function: linear;
 	animation-name: tic-h;
 	animation-duration: 30s;
-	
 }
 
 .news-ticker-h:hover { 
@@ -333,10 +449,12 @@
     transition: opacity 100ms ease-in;
     pointer-events: none;
 }
+
 .modalDialog:target {
     opacity:1;
     pointer-events: auto;
 }
+
 .modalDialog > div {
     max-width: 800px;
     width: 90%;
@@ -365,3 +483,94 @@
 .close:hover {
     background: rgb(248, 49, 49);
 }
+
+
+.wrapper {
+    float: left;
+    width: 30%;
+    min-width: 300px;
+    margin: 3rem;
+    padding: 3rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.136);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+  }
+  .wrapper>h1 {
+    font-family: "Century Gothic";
+    font-weight: 200;
+    font-size: 1.5em;
+    letter-spacing: .15em;
+    color: whitesmoke
+  }
+  .details {
+    width: 95%;
+    margin: 0 auto 2em;
+    padding-top: 10.5em;
+    padding-bottom: 1em;
+    background-color: #FFEBC8;
+    color: #333;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 5px rgba(0, 0, 0, 0.24);
+    transition: all ease-in 0.15s;
+  }
+  
+  .wrapper:hover .details{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 5px rgba(0,0,0,0.22);
+    transform: translate(0px, -2px) scale(1.01);
+  }
+  
+  .details>h1 {
+    font-family: "Playfair Display";
+    font-size: 1em;
+  }
+  .details>h2 {
+    font-family: sans-serif;
+    font-size: 1.4em;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+  }
+  .details>p {
+    font-family: sans-serif;
+    font-size: 1em;
+    font-weight: 200;
+  }
+  
+  .image{
+    position: relative;
+    z-index: 2;
+    width: 85%;
+    height: 250px;
+    margin: 0 auto -10em;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.24);
+    transition: all ease-in .15s;
+  }
+  .wrapper:hover .image{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transform: translate(0px, -3px) scale(1.02);
+  }
+    
+  .i1{
+      background-image: url(https://31.media.tumblr.com/9e9ba532a3174811c79e07bc4a61ebdc/tumblr_n92w6iRSjY1r5gmiko1_500.jpg);
+  }
+  .i2 {
+    background-image: url(http://www.asianventure.com/images/country/vietnam.jpg);
+  }
+  .i3 {
+    background-image: url(https://media-cdn.tripadvisor.com/media/photo-s/06/c7/ba/92/salah-satu-bangunan-di.jpg);
+    }
+  
+  @media screen and (max-width: 1000px) {
+    .wrapper{
+      width: 47%;
+    }
+  }
+  @media screen and(max-width:700px){
+    .wrapper{
+      float: none;
+      width: 70%;
+      margin: 1em auto;
+    }
+  }
