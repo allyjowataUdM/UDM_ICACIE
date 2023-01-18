@@ -482,6 +482,7 @@
   .wrapper>h1 {
     font-family: "Century Gothic";
     font-weight: 200;
+    margin-bottom: 2rem;
     font-size: 1.5em;
     letter-spacing: .15em;
     color: whitesmoke
@@ -503,12 +504,12 @@
   }
   
   .details>h1 {
-    font-family: "Playfair Display";
+    font-family: "Century Gothic";
     font-size: 1em;
   }
   .details>h2 {
     font-family: sans-serif;
-    font-size: 1.4em;
+    font-size: 1.3em;
     font-weight: 200;
     letter-spacing: 0.1em;
   }
@@ -534,15 +535,24 @@
     transform: translate(0px, -3px) scale(1.02);
   }
     
-  .i1{
-      background-image: url(https://31.media.tumblr.com/9e9ba532a3174811c79e07bc4a61ebdc/tumblr_n92w6iRSjY1r5gmiko1_500.jpg);
-  }
-  .i2 {
-    background-image: url(http://www.asianventure.com/images/country/vietnam.jpg);
-  }
-  .i3 {
-    background-image: url(https://media-cdn.tripadvisor.com/media/photo-s/06/c7/ba/92/salah-satu-bangunan-di.jpg);
-    }
+.i1{
+    background-image: url(../images/Dinarobin-Beachcomber.jpg);;
+}
+.i2 {
+    background-image: url(../images/Sunrise-Attitude.jpg);
+}
+.i3 {
+    background-image: url(../images/The-Bay.jpg);
+}
+.i4 {
+    background-image: url(../images/Victoria.jpg);
+}
+.i5 {
+    background-image: url(../images/JW-Marriott.jpg);
+}
+.i6 {
+    background-image: url(../images/Le-Meridien.jpg);
+}
   
   @media screen and (max-width: 1000px) {
     .wrapper{
@@ -579,7 +589,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-
+    font-family: "Century Gothic";
     color: #727272;
     text-transform: uppercase;
     padding: 1rem;
