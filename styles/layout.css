@@ -13,10 +13,6 @@
     z-index: 1000;
 }
 
-.topnav{
-    display: none;
-}
-
 .title_home{
     font-family: "Century Gothic";
     display: flex;
@@ -27,10 +23,11 @@
 
 
 .topnav {
+    font-family: "Century Gothic";
+    font-weight: 600;
     overflow: hidden;
     background-color: var(--C1);
-    position: sticky;
-    top: 0;
+    display: none;
 }
 
 
@@ -99,14 +96,38 @@
 
 }
 
-.content_keynotes{
+.content_keynotes {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 8rem;
-    padding: 4rem 0;
+    padding-bottom: 4rem;
     z-index: 10;
     animation: transitionFadeIn 1500ms ease;
+}
+
+.content_accommodation{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 10;
+    animation: transitionFadeIn 1500ms ease;
+}
+
+.content_title{
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 0 5rem 0;
+    animation: transitionFadeIn 1500ms ease;
+    transition: all 1s linear 0s;
+    text-align: center;
+}
+
+.content_title h2{
+    font-family: "Century Gothic";
+    color: whitesmoke;
+    font-size: 4rem;
+    padding: 1rem;
+    animation: transitionFadeIn 1500ms ease;  
 }
 
 .content_venue, .content_travel{
@@ -211,33 +232,7 @@
     z-index: 1001;
 }
 
-@media only screen and (max-width: 975px) {
-    .title_home{
-        flex-direction: column;
-        height: auto;
-    }
 
-    .udm_logo{
-        text-align: center;
-    }
-
-    .icacie_logo{
-        text-align: center;
-    }
-
-    .navbar{
-        display: none;
-    }
-    .topnav{
-        display: contents;
-    }
-    .main-background{
-        padding: 1rem;
-    }
-    .content_main, .content_venue{
-        padding: 2rem;
-    }
-}
 
 @keyframes transitionSlideIn {
     from {
@@ -263,6 +258,7 @@
 .card_keynotes {
     padding: 30px;
     margin: 30px;
+    min-width: 25rem;
     background: rgba(255, 255, 255, 0.136);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -438,6 +434,8 @@
 
 
 .modalDialog {
+    display: flex;
+    align-items: center;
     position: fixed;
     top: 0;
     right: 0;
@@ -462,32 +460,16 @@
     margin: 10% auto;
     padding: 20px;
     border-radius: 3px;
-    background: #fff;
+
 }
 .close {
-    font-family: Arial, Helvetica, sans-serif;
-    background: rgb(225, 37, 37);
-    color: #fff;
-    line-height: 25px;
-    position: absolute;
-    right: -12px;
-    text-align: center;
-    top: -10px;
-    width: 70px;
-    height: 34px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 15%;
-    padding-top: 5px;
+    color: var(--C6);
+    padding: 1rem;
 }
-.close:hover {
-    background: rgb(248, 49, 49);
-}
-
 
 .wrapper {
     float: left;
-    width: 30%;
+    width: 40%;
     min-width: 300px;
     margin: 3rem;
     padding: 3rem;
@@ -574,3 +556,123 @@
       margin: 1em auto;
     }
   }
+
+
+
+
+  .modalDialog .card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    transition: all 0.3s;
+  }
+  .modalDialog .card:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .modalDialog .card_content{
+    display: flex;
+    flex-direction: row;
+  }
+  .modalDialog .card nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    color: #727272;
+    text-transform: uppercase;
+    padding: 1rem;
+    border-bottom: 2px solid #efefef;
+  }
+  
+  .modalDialog .card .photo {
+    padding: 3rem;
+    justify-self: center;
+    align-self: center;
+  }
+  
+  .modalDialog .card .description {
+    padding: 3rem;
+    border-left: 2px solid #efefef;
+  }
+
+  .modalDialog .card .description h1 {
+    color: #515151;
+    font-weight: 300;
+    padding-top: 15px;
+    margin: 0;
+    font-size: 30px;
+    font-weight: 300;
+  }
+  .modalDialog .card .description h2 {
+    color: #515151;
+    margin: 0;
+    font-weight: 500;
+    font-size: 2rem;
+  }
+  .modalDialog .card .description h4 {
+    margin: 0;
+    color: #727272;
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+  .modalDialog .card .description p {
+    font-size: 1.5rem;
+    line-height: 20px;
+    color: #727272;
+    padding: 20px 0;
+    margin: 0;
+  }
+
+
+  @media only screen and (max-width: 975px) {
+    .title_home{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .udm_logo{
+        text-align: center;
+    }
+
+    .icacie_logo{
+        text-align: center;
+    }
+
+    .navbar{
+        display: none;
+    }
+    .topnav{
+        display: contents;
+    }
+    .main-background{
+        padding: 1rem;
+    }
+    .content_main, .content_venue{
+        padding: 2rem;
+    }
+    .modalDialog .card_content{
+        flex-direction: column;
+    }
+    .modalDialog{
+        height: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+        align-items:unset;
+    }
+    .content_keynotes{
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        justify-content: unset;
+    }
+    .content_accommodation{
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        justify-content: unset;
+    }
+
+    .content_keynotes, .content_main, .content_title h2{
+        font-size: 3rem; 
+    }
+}
