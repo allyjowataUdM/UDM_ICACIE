@@ -130,6 +130,14 @@
     animation: transitionFadeIn 1500ms ease;  
 }
 
+.content_title h3{
+    font-family: "Century Gothic";
+    color: whitesmoke;
+    font-size: 2.5rem;
+    padding: 1rem;
+    animation: transitionFadeIn 1500ms ease;  
+}
+
 .content_venue, .content_travel{
     display: flex;
     flex-direction: column;
@@ -685,4 +693,39 @@
     .content_keynotes, .content_main, .content_title h2{
         font-size: 3rem; 
     }
+
+    #map{
+        height: 50rem;
+    }
+
+    .map-popup{
+        flex-direction: column;
+    }
+}
+
+#map{
+    height: 100rem;
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 12rem;
+}
+
+.map-popup{
+    display: flex;
+}
+
+.map-popup img{
+    height: 30rem;
+    width: 30rem;
+    margin: 1rem;
+}
+
+.map-popup_details{
+    display: flex;
+    flex-direction: column;
+}
+
+.map-popup h3, a, p{
+    padding: 1rem;
+    
 }

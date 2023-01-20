@@ -308,17 +308,10 @@
 
                 <div class="content_title" id="content_sightseeing">
                     <h2>Sightseeing</h2>
+                    <h3>Take the opportunity to visit the paradise island of Mauritius</h3>
                 </div>
                 <div class="content_sightseeing">
-                    <div class="mapouter">
-                        <div class="gmap_canvas">
-                            <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=mauritius&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                            <a href="https://2yu.co">2yu</a><br>
-                            <style>.mapouter{position:relative;text-align:right;height:80rem;width:100%; margin-bottom: 15rem;}</style>
-                            <a href="https://embedgooglemap.2yu.co/">html embed google map</a>
-                            <style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%; border-radius: 16px;}</style>
-                        </div>
-                    </div>
+                    <div id="map"></div>
                 </div>
 
             </div>
@@ -340,6 +333,128 @@
         }
     }
 </script>
+
+<script>
+function initMap() {
+
+    //initial map centered
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 11,
+        center: { lat: -20.247515226522967, lng: 57.56801824724033 },
+    });
+
+    //array of markers
+    var markers =[
+        {
+            coords:{ lat: -20.10177427976626, lng: 57.57327596673485 },
+            title: 'Université des Mascareignes (Host Institution)',
+            icon: "images/pointer-blue.png",
+            content: 
+            '<div class="map-popup">'+
+                '<img src="https://udm.ac.mu/udm_new/wp-content/uploads/2020/03/university-mauritius.jpg">'+
+                '<div class="map-popup_details">'+
+                    '<h3>Université des Mascareignes (Host Institution)</h3>'+
+                    '<p>18th-century botanical gardens with 500 plant species including giant water lilies & Talipot palm. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam minima atque ex ipsum quidem saepe repudiandae inventore vero aliquid ut! Famet consectetur adipisicing elit. Nam minima atque ex ipsum quidem saepe repudiandae inventore </p>'+
+                    '<a href="https://goo.gl/maps/r9M5qd9avmCVexsn6" target="_blank">read more...</a>'+
+                '</div>'+
+            '</div>',
+        },
+        {
+            coords:{ lat: -20.420400621330547, lng: 57.45192526858889 },
+            title: 'Black River Gorges National Park',
+            content: 
+            '<div class="map-popup">'+
+                '<img src="https://lh5.googleusercontent.com/p/AF1QipMR43ebFH5aeTnrS9OOwJP6rORmxzGIbW2AXVf2=w408-h305-k-no">'+
+                '<div class="map-popup_details">'+
+                    '<h3>Black River Gorges National Park</h3>'+
+                    '<p>18th-century botanical gardens with 500 plant species including giant water lilies & Talipot palm. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam minima atque ex ipsum quidem saepe repudiandae inventore vero aliquid ut! Famet consectetur adipisicing elit. Nam minima atque ex ipsum quidem saepe repudiandae inventore </p>'+
+                    '<a href="https://goo.gl/maps/an2xcsf9xC3kDzi78" target="_blank">read more...</a>'+
+                '</div>'+
+            '</div>',
+        },
+        {
+            coords:{ lat: -20.43187993733304, lng: 57.38758430992969 },
+            title: 'Chamarel Waterfall',
+            content: 
+            '<div class="map-popup">'+
+                '<img src="https://lh5.googleusercontent.com/p/AF1QipPrceNOr8sDANLOajOlFdjXLPhnDBWhW5YNLX-e=w408-h306-k-no">'+
+                '<div class="map-popup_details">'+
+                    '<h3>Chamarel Waterfall</h3>'+
+                    '<p>18th-century botanical gardens with 500 plant species including giant water lilies & Talipot palm. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam minima atque ex ipsum quidem saepe repudiandae inventore vero aliquid ut! Famet consectetur adipisicing elit. Nam minima atque ex ipsum quidem saepe repudiandae inventore </p>'+
+                    '<a href="https://goo.gl/maps/asKtaGx1mbQaTCmYA" target="_blank">read more...</a>'+
+                '</div>'+
+            '</div>',
+        },        
+        {
+            coords:{ lat: -20.160737078563535, lng: 57.509680871344266 },
+            title: 'Citadelle (Fort Adelaide)',
+            content: 
+            '<div class="map-popup">'+
+                '<img src="https://lh5.googleusercontent.com/p/AF1QipMbKpIfawbFJMRBO62dH5xPxV3grvD4vh4T9yM7=w408-h306-k-no">'+
+                '<div class="map-popup_details">'+
+                    '<h3>Citadelle (Fort Adelaide)</h3>'+
+                    '<p>18th-century botanical gardens with 500 plant species including giant water lilies & Talipot palm. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam minima atque ex ipsum quidem saepe repudiandae inventore vero aliquid ut! Famet consectetur adipisicing elit. Nam minima atque ex ipsum quidem saepe repudiandae inventore </p>'+
+                    '<a href="https://goo.gl/maps/edeEhaN9P8muKUoS9" target="_blank">read more...</a>'+
+                '</div>'+
+            '</div>',
+        },        
+        {
+            coords:{ lat: -20.280336078120534, lng: 57.401973088590616 },
+            title: 'Casela Nature Parks',
+            content: 
+            '<div class="map-popup">'+
+                '<img src="https://lh5.googleusercontent.com/p/AF1QipNZ7cYgcv0q1cRHKodw2n0eM3rxmwSE1EEwlPaq=w408-h306-k-no">'+
+                '<div class="map-popup_details">'+
+                    '<h3>Casela Nature Park</h3>'+
+                    '<p>18th-century botanical gardens with 500 plant species including giant water lilies & Talipot palm. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam minima atque ex ipsum quidem saepe repudiandae inventore vero aliquid ut! Famet consectetur adipisicing elit. Nam minima atque ex ipsum quidem saepe repudiandae inventore </p>'+
+                    '<a href="https://goo.gl/maps/LdfurG5HC1YwQmEg6" target="_blank">read more...</a>'+
+                '</div>'+
+            '</div>',
+        },
+    ];
+
+    //add markers on map
+    function addMarker(props){
+        const marker = new google.maps.Marker({
+            position: props.coords,
+            map: map,
+            title: props.title,
+            icon: "images/pointer.png",
+        });
+
+        if(props.icon){
+            marker.setIcon(props.icon)
+        }
+        
+        const infowindow = new google.maps.InfoWindow({
+            content: props.content,
+        });
+        
+        marker.addListener("click", () => {
+            infowindow.open({
+                anchor: marker,
+                map: map,
+            });
+        });
+
+    }
+
+    for(var i=0; i < markers.length; i++){
+        addMarker(markers[i]);
+    }
+  
+
+}
+
+window.initMap = initMap;
+</script>
+
+
+<script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1JYz5zW0lsWg758hmy5EnTj2vhmSnZO0&callback=initMap">
+    //google maps api
+</script>
+
 
 
 </body>
