@@ -1,4 +1,4 @@
-.header_home{
+.header{
     background-color: var(--C2);
 }
 
@@ -13,7 +13,7 @@
     z-index: 1000;
 }
 
-.title_home{
+.header__title{
     font-family: "Century Gothic";
     display: flex;
     justify-content: space-between;
@@ -22,7 +22,7 @@
 }
 
 
-.topnav {
+.navbar-mobile {
     font-family: "Century Gothic";
     font-weight: 600;
     overflow: hidden;
@@ -45,7 +45,7 @@
 }
 
 
-.content_main{
+.content__main{
     display: flex;
     flex-direction: column;
     padding: 3rem 6.2rem;
@@ -59,27 +59,27 @@
     transition: all 1s linear 0s;
 }
 
-.content_main a{
+.content__main a{
     text-decoration: none;
 }
 
-.content_main a:hover{
+.content__main a:hover{
     text-decoration-line: underline;
     text-decoration-color: whitesmoke;
 }
 
-.content_main:hover{
+.content__main:hover{
     backdrop-filter: blur(10px);
 }
 
-.content_main h3{
+.content__main h3{
     color: whitesmoke;
     font-size: 2rem;
     padding: 0 1rem;
     animation: transitionFadeIn 1500ms ease;  
 }
 
-.content_main h2{
+.content__main h2{
     font-family: "Century Gothic";
     color: whitesmoke;
     font-size: 4rem;
@@ -87,7 +87,7 @@
     animation: transitionFadeIn 1500ms ease;  
 }
 
-.content_main p{
+.content__main p{
     color: rgb(210, 210, 210);
     font-size: 1.8rem;
     padding: 1rem;
@@ -96,24 +96,7 @@
 
 }
 
-.content_keynotes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-bottom: 4rem;
-    z-index: 10;
-    animation: transitionFadeIn 1500ms ease;
-}
-
-.content_accommodation{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    z-index: 10;
-    animation: transitionFadeIn 1500ms ease;
-}
-
-.content_title{
+.content__title{
     display: flex;
     flex-direction: column;
     padding: 8rem 0 5rem 0;
@@ -122,7 +105,7 @@
     text-align: center;
 }
 
-.content_title h2{
+.content__title h2{
     font-family: "Century Gothic";
     color: whitesmoke;
     font-size: 4rem;
@@ -130,12 +113,29 @@
     animation: transitionFadeIn 1500ms ease;  
 }
 
-.content_title h3{
+.content__title h3{
     font-family: "Century Gothic";
     color: whitesmoke;
     font-size: 2.5rem;
     padding: 1rem;
     animation: transitionFadeIn 1500ms ease;  
+}
+
+.content__keynotes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 4rem;
+    z-index: 10;
+    animation: transitionFadeIn 1500ms ease;
+}
+
+.content__accommodation{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 10;
+    animation: transitionFadeIn 1500ms ease;
 }
 
 .content_venue, .content_travel{
@@ -226,44 +226,10 @@
 
 }
 
-.footer_content1{
-    background-color: rgba(255, 255, 255, 0.136);
-    height: 207rem;
-    padding: 5rem;
-}
-
-.footer_content{
-    background-color: hotpink;
-    height: 7rem;
-    position: sticky;
-    top: 0;
-    z-index: 1001;
-}
 
 
 
-@keyframes transitionSlideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-  
-@keyframes transitionFadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
-.card_keynotes {
+.content__keynotes-card {
     padding: 30px;
     margin: 30px;
     min-width: 25rem;
@@ -278,15 +244,15 @@
     transition: all 3s linear 0s;
 }
 
-.card_keynotes:hover{
+.content__keynotes-card:hover{
     backdrop-filter: blur(10px);
 }
 
-.card_keynotes a{
+.content__keynotes-card a{
     text-decoration: none;
 }
   
-.card_keynotes .picture {
+.content__keynotes-card .picture {
     display: inline-block;
     height: 130px;
     width: 130px;
@@ -295,7 +261,7 @@
     position: relative;
 }
   
-.card_keynotes .picture::before {
+.content__keynotes-card .picture::before {
     content: "";
     width: 100%;
     height: 0;
@@ -310,11 +276,11 @@
     transition: all 0.3s linear 0s;
 }
   
-.card_keynotes:hover .picture::before {
+.content__keynotes-card:hover .picture::before {
     height: 100%;
 }
   
-.card_keynotes .picture::after {
+.content__keynotes-card .picture::after {
     content: "";
     width: 100%;
     height: 100%;
@@ -326,7 +292,7 @@
     z-index: -1;
 }
   
-.card_keynotes .picture img {
+.content__keynotes-card .picture img {
     width: 100%;
     height: auto;
     border-radius: 50%;
@@ -334,12 +300,12 @@
     transition: all 0.9s ease 0s;
 }
   
-.card_keynotes:hover .picture img {
+.content__keynotes-card:hover .picture img {
     box-shadow: 0 0 0 14px #f7f5ec;
     transform: scale(0.7);
 }
   
-.card_keynotes .title {
+.content__keynotes-card .title {
 
     display: block;
     font-size: 15px;
@@ -349,7 +315,7 @@
     
 }
 
-.card_keynotes .name {
+.content__keynotes-card .name {
     font-family: "Century Gothic";
     color: whitesmoke;
     font-size: 22px;
@@ -357,7 +323,7 @@
     
 }
   
-.card_keynotes .social {
+.content__keynotes-card .social {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -368,15 +334,15 @@
     transition: all 0.5s ease 0s;
 }
   
-.card_keynotes:hover .social {
+.content__keynotes-card:hover .social {
     bottom: 0;
 }
   
-.card_keynotes .social li {
+.content__keynotes-card .social li {
     display: inline-block;
 }
   
-.card_keynotes .social li a {
+.content__keynotes-card .social li a {
     display: block;
     padding: 10px;
     font-size: 17px;
@@ -385,20 +351,21 @@
     text-decoration: none;
 }
   
-.card_keynotes .social li a:hover {
+.content__keynotes-card .social li a:hover {
     color: var(--C2);
     background-color: #f7f5ec;
 }
 
 
-.ticker-wrapper-h{
+.ticker{
 	display: flex;	
 	overflow: hidden;
     background-color: var(--C2);
 }
 
-.ticker-wrapper-h .heading{
+.ticker .ticker__heading{
     font-family: "Century Gothic";
+    font-weight: bold;
 	background-color: #1c6547;
 	color: #fff;
 	padding: 6px 10px;
@@ -406,31 +373,27 @@
 	z-index: 500;
 }
 
-.news-ticker-h{
+.ticker__news-item{
 	display: flex;
 	padding-left: 90%;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
-	animation-name: tic-h;
+	animation-name: news-ticker;
 	animation-duration: 30s;
 }
 
-.news-ticker-h:hover { 
+.ticker__news-item:hover { 
 	animation-play-state: paused; 
 }
 
-.ticker-wrapper-h .heading{
-    font-weight: bold;
-}
-
-.news-ticker-h li{
+.ticker__news-item li{
 	display: flex;
 	align-items: center;
 	white-space: nowrap;
 	padding-left: 20px;
 }
 
-@keyframes tic-h {
+@keyframes news-ticker {
 	0% {
 		transform: translate3d(0, 0, 0);
 		visibility: visible;
@@ -441,7 +404,7 @@
 }
 
 
-.modalDialog {
+.keynotes-modal {
     display: flex;
     align-items: center;
     position: fixed;
@@ -456,12 +419,12 @@
     pointer-events: none;
 }
 
-.modalDialog:target {
+.keynotes-modal:target {
     opacity:1;
     pointer-events: auto;
 }
 
-.modalDialog > div {
+.keynotes-modal > div {
     max-width: 800px;
     width: 90%;
     position: relative;
@@ -578,22 +541,22 @@
 
 
 
-  .modalDialog .card {
+  .keynotes-modal .card {
     display: flex;
     flex-direction: column;
     background: white;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     transition: all 0.3s;
   }
-  .modalDialog .card:hover {
+  .keynotes-modal .card:hover {
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
-  .modalDialog .card_content{
+  .keynotes-modal .card__content{
     display: flex;
     flex-direction: row;
   }
-  .modalDialog .card nav {
+  .keynotes-modal .card nav {
     display: flex;
     align-items: center;
     width: 100%;
@@ -604,18 +567,18 @@
     border-bottom: 2px solid #efefef;
   }
   
-  .modalDialog .card .photo {
+  .keynotes-modal .card .photo {
     padding: 3rem;
     justify-self: center;
     align-self: center;
   }
   
-  .modalDialog .card .description {
+  .keynotes-modal .card .description {
     padding: 3rem;
     border-left: 2px solid #efefef;
   }
 
-  .modalDialog .card .description h1 {
+  .keynotes-modal .card .description h1 {
     color: #515151;
     font-weight: 300;
     padding-top: 15px;
@@ -623,19 +586,19 @@
     font-size: 30px;
     font-weight: 300;
   }
-  .modalDialog .card .description h2 {
+  .keynotes-modal .card .description h2 {
     color: #515151;
     margin: 0;
     font-weight: 500;
     font-size: 2rem;
   }
-  .modalDialog .card .description h4 {
+  .keynotes-modal .card .description h4 {
     margin: 0;
     color: #727272;
     font-weight: 500;
     font-size: 1.6rem;
   }
-  .modalDialog .card .description p {
+  .keynotes-modal .card .description p {
     font-size: 1.5rem;
     line-height: 20px;
     color: #727272;
@@ -645,52 +608,48 @@
 
 
   @media only screen and (max-width: 975px) {
-    .title_home{
+    .header__title{
         flex-direction: column;
         height: auto;
     }
 
-    .udm_logo{
-        text-align: center;
-    }
-
-    .icacie_logo{
+    .header__logo{
         text-align: center;
     }
 
     .navbar{
         display: none;
     }
-    .topnav{
+    .navbar-mobile{
         display: contents;
     }
     .main-background{
         padding: 1rem;
     }
-    .content_main, .content_venue{
+    .content__main, .content_venue{
         padding: 2rem;
     }
-    .modalDialog .card_content{
+    .keynotes-modal .card__content{
         flex-direction: column;
     }
-    .modalDialog{
+    .keynotes-modal{
         height: auto;
         overflow-x: hidden;
         overflow-y: auto;
         align-items:unset;
     }
-    .content_keynotes{
+    .content__keynotes{
         flex-wrap: nowrap;
         overflow-x: scroll;
         justify-content: unset;
     }
-    .content_accommodation{
+    .content__accommodation{
         flex-wrap: nowrap;
         overflow-x: scroll;
         justify-content: unset;
     }
 
-    .content_keynotes, .content_main, .content_title h2{
+    .content__keynotes, .content__main, .content__title h2{
         font-size: 3rem; 
     }
 
