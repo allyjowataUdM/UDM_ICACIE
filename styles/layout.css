@@ -1,690 +1,281 @@
-.header{
-    background-color: var(--C2);
+.header {
+  background-color: var(--C2);
 }
 
-.navbar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 5rem;
-    background-color: var(--C1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  background-color: var(--C1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.header__title{
-    font-family: "Century Gothic";
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 20rem;
+.header__title {
+  font-family: "Century Gothic";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20rem;
 }
-
 
 .navbar-mobile {
-    font-family: "Century Gothic";
-    font-weight: 600;
-    overflow: hidden;
-    background-color: var(--C1);
-    display: none;
+  font-family: "Century Gothic";
+  font-weight: 600;
+  overflow: hidden;
+  background-color: var(--C1);
+  display: none;
 }
 
-
-.active {
-    background-color: var(--C1);
-    color: white;
+.main-background {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url("../images/udm-background3.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem 25rem;
 }
 
-.main-background{
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('../images/udm-background3.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 1rem 25rem;
+.content__main {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 6.2rem;
+  margin: 5rem 0;
+  background: rgba(255, 255, 255, 0.136);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  animation: transitionFadeIn 1500ms ease;
+  transition: all 1s linear 0s;
 }
 
-
-.content__main{
-    display: flex;
-    flex-direction: column;
-    padding: 3rem 6.2rem;
-    margin: 5rem 0;
-    background: rgba(255, 255, 255, 0.136);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    z-index: 10;
-    animation: transitionFadeIn 1500ms ease;
-    transition: all 1s linear 0s;
-}
-
-.content__main a{
-    text-decoration: none;
-}
-
-.content__main a:hover{
-    text-decoration-line: underline;
-    text-decoration-color: whitesmoke;
-}
-
-.content__main:hover{
-    backdrop-filter: blur(10px);
-}
-
-.content__main h3{
-    color: whitesmoke;
-    font-size: 2rem;
-    padding: 0 1rem;
-    animation: transitionFadeIn 1500ms ease;  
-}
-
-.content__main h2{
-    font-family: "Century Gothic";
-    color: whitesmoke;
-    font-size: 4rem;
-    padding: 1rem;
-    animation: transitionFadeIn 1500ms ease;  
-}
-
-.content__main p{
-    color: rgb(210, 210, 210);
-    font-size: 1.8rem;
-    padding: 1rem;
-    text-align: justify;
-    animation: transitionFadeIn 1500ms ease-in;
-
-}
-
-.content__title{
-    display: flex;
-    flex-direction: column;
-    padding: 8rem 0 5rem 0;
-    animation: transitionFadeIn 1500ms ease;
-    transition: all 1s linear 0s;
-    text-align: center;
-}
-
-.content__title h2{
-    font-family: "Century Gothic";
-    color: whitesmoke;
-    font-size: 4rem;
-    padding: 1rem;
-    animation: transitionFadeIn 1500ms ease;  
-}
-
-.content__title h3{
-    font-family: "Century Gothic";
-    color: whitesmoke;
-    font-size: 2.5rem;
-    padding: 1rem;
-    animation: transitionFadeIn 1500ms ease;  
+.content__title {
+  display: flex;
+  flex-direction: column;
+  padding: 8rem 0 5rem 0;
+  animation: transitionFadeIn 1500ms ease;
+  transition: all 1s linear 0s;
+  text-align: center;
 }
 
 .content__keynotes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-bottom: 4rem;
-    z-index: 10;
-    animation: transitionFadeIn 1500ms ease;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 4rem;
+  z-index: 10;
+  animation: transitionFadeIn 1500ms ease;
 }
 
-.content__accommodation{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    z-index: 10;
-    animation: transitionFadeIn 1500ms ease;
+.content__accommodation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 10;
+  animation: transitionFadeIn 1500ms ease;
 }
 
-.content_venue, .content_travel{
-    display: flex;
-    flex-direction: column;
-    padding: 3rem 6.2rem;
-    margin: 5rem 0;
-    background: rgba(255, 255, 255, 0.136);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    z-index: 10;
-    animation: transitionFadeIn 1500ms ease;
-    transition: all 1s linear 0s;
+.content__venue,
+.content__travel {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 6.2rem;
+  margin: 5rem 0;
+  background: rgba(255, 255, 255, 0.136);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  animation: transitionFadeIn 1500ms ease;
+  transition: all 1s linear 0s;
 }
-
-.content_venue a{
-    text-decoration: none;
-}
-
-.content_venue a:hover{
-    text-decoration-line: underline;
-    text-decoration-color: var(--C4);
-}
-
-.content_venue:hover{
-    backdrop-filter: blur(10px);
-}
-
-.content_venue h3{
-    color: var(--C4);
-    font-size: 2rem;
-    padding: 0 1rem;
-    animation: transitionFadeIn 1500ms ease;  
-}
-
-.content_venue h2{
-    font-family: "Century Gothic";
-    color: whitesmoke;
-    font-size: 4rem;
-    padding: 1rem;
-    animation: transitionFadeIn 1500ms ease;  
-}
-
-.content_venue p{
-    color: rgb(210, 210, 210);
-    font-size: 1.8rem;
-    padding: 1rem;
-    text-align: justify;
-    animation: transitionFadeIn 1500ms ease-in;
-
-}
-
-.content_travel a{
-    text-decoration: none;
-}
-
-.content_travel a:hover{
-    text-decoration-line: underline;
-    text-decoration-color: var(--C4);
-}
-
-.content_travel:hover{
-    backdrop-filter: blur(10px);
-}
-
-.content_travel h3{
-    color: var(--C4);
-    font-size: 2rem;
-    padding: 0 1rem;
-    animation: transitionFadeIn 1500ms ease;  
-}
-
-.content_travel h2{
-    font-family: "Century Gothic";
-    color: whitesmoke;
-    font-size: 4rem;
-    padding: 1rem;
-    animation: transitionFadeIn 1500ms ease;  
-}
-
-.content_travel p{
-    color: rgb(210, 210, 210);
-    font-size: 1.8rem;
-    padding: 1rem;
-    text-align: justify;
-    animation: transitionFadeIn 1500ms ease-in;
-
-}
-
-
-
 
 .content__keynotes-card {
-    padding: 30px;
-    margin: 30px;
-    min-width: 25rem;
-    background: rgba(255, 255, 255, 0.136);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    text-align: center;
-    overflow: hidden;
-    width: 23rem;
-    transition: all 3s linear 0s;
+  padding: 30px;
+  margin: 30px;
+  min-width: 25rem;
+  background: rgba(255, 255, 255, 0.136);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  text-align: center;
+  overflow: hidden;
+  width: 23rem;
+  transition: all 3s linear 0s;
 }
 
-.content__keynotes-card:hover{
-    backdrop-filter: blur(10px);
+.ticker {
+  display: flex;
+  overflow: hidden;
+  background-color: var(--C2);
 }
 
-.content__keynotes-card a{
-    text-decoration: none;
+.ticker__news-item {
+  display: flex;
+  padding-left: 90%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: news-ticker;
+  animation-duration: 30s;
 }
-  
-.content__keynotes-card .picture {
-    display: inline-block;
-    height: 130px;
-    width: 130px;
-    margin-bottom: 20px;
-    z-index: 1;
-    position: relative;
-}
-  
-.content__keynotes-card .picture::before {
-    content: "";
-    width: 100%;
-    height: 0;
-    border-radius: 50%;
-    background-color: var(--C2);
-    position: absolute;
-    bottom: 135%;
-    right: 0;
-    left: 0;
-    opacity: 0.9;
-    transform: scale(3);
-    transition: all 0.3s linear 0s;
-}
-  
-.content__keynotes-card:hover .picture::before {
-    height: 100%;
-}
-  
-.content__keynotes-card .picture::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: var(--C2);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-  
-.content__keynotes-card .picture img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    transform: scale(1);
-    transition: all 0.9s ease 0s;
-}
-  
-.content__keynotes-card:hover .picture img {
-    box-shadow: 0 0 0 14px #f7f5ec;
-    transform: scale(0.7);
-}
-  
-.content__keynotes-card .title {
-
-    display: block;
-    font-size: 15px;
-    color: var(--C0);
-    text-transform: capitalize;
-    font-weight: 500;
-    
-}
-
-.content__keynotes-card .name {
-    font-family: "Century Gothic";
-    color: whitesmoke;
-    font-size: 22px;
-    padding: 1rem 0;
-    
-}
-  
-.content__keynotes-card .social {
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: var(--C2);
-    position: absolute;
-    bottom: -100px;
-    left: 0;
-    transition: all 0.5s ease 0s;
-}
-  
-.content__keynotes-card:hover .social {
-    bottom: 0;
-}
-  
-.content__keynotes-card .social li {
-    display: inline-block;
-}
-  
-.content__keynotes-card .social li a {
-    display: block;
-    padding: 10px;
-    font-size: 17px;
-    color: white;
-    transition: all 0.3s ease 0s;
-    text-decoration: none;
-}
-  
-.content__keynotes-card .social li a:hover {
-    color: var(--C2);
-    background-color: #f7f5ec;
-}
-
-
-.ticker{
-	display: flex;	
-	overflow: hidden;
-    background-color: var(--C2);
-}
-
-.ticker .ticker__heading{
-    font-family: "Century Gothic";
-    font-weight: bold;
-	background-color: #1c6547;
-	color: #fff;
-	padding: 6px 10px;
-	flex: 0 0 auto;
-	z-index: 500;
-}
-
-.ticker__news-item{
-	display: flex;
-	padding-left: 90%;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-	animation-name: news-ticker;
-	animation-duration: 30s;
-}
-
-.ticker__news-item:hover { 
-	animation-play-state: paused; 
-}
-
-.ticker__news-item li{
-	display: flex;
-	align-items: center;
-	white-space: nowrap;
-	padding-left: 20px;
-}
-
-@keyframes news-ticker {
-	0% {
-		transform: translate3d(0, 0, 0);
-		visibility: visible;
-	}
-	100% {
-		transform: translate3d(-100%, 0, 0);
-	}
-}
-
 
 .keynotes-modal {
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99999;
-    opacity:0;
-    transition: opacity 100ms ease-in;
-    pointer-events: none;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 100ms ease-in;
+  pointer-events: none;
 }
 
-.keynotes-modal:target {
-    opacity:1;
-    pointer-events: auto;
+.content__accommodation-card {
+  float: left;
+  width: 40%;
+  min-width: 300px;
+  margin: 3rem;
+  padding: 3rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.136);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
 }
 
-.keynotes-modal > div {
-    max-width: 800px;
-    width: 90%;
-    position: relative;
-    margin: 10% auto;
-    padding: 20px;
-    border-radius: 3px;
-
-}
-.close {
-    color: var(--C6);
-    padding: 1rem;
+.image {
+  position: relative;
+  z-index: 2;
+  width: 85%;
+  height: 250px;
+  margin: 0 auto -10em;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.24);
+  transition: all ease-in 0.15s;
 }
 
-.wrapper {
-    float: left;
-    width: 40%;
-    min-width: 300px;
-    margin: 3rem;
-    padding: 3rem;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.136);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-  }
-  .wrapper>h1 {
-    font-family: "Century Gothic";
-    font-weight: 200;
-    margin-bottom: 2rem;
-    font-size: 1.5em;
-    letter-spacing: .15em;
-    color: whitesmoke
-  }
-  .details {
-    width: 95%;
-    margin: 0 auto 2em;
-    padding-top: 10.5em;
-    padding-bottom: 1em;
-    background-color: #FFEBC8;
-    color: #333;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 5px rgba(0, 0, 0, 0.24);
-    transition: all ease-in 0.15s;
-  }
-  
-  .wrapper:hover .details{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 5px rgba(0,0,0,0.22);
-    transform: translate(0px, -2px) scale(1.01);
-  }
-  
-  .details>h1 {
-    font-family: "Century Gothic";
-    font-size: 1em;
-  }
-  .details>h2 {
-    font-family: sans-serif;
-    font-size: 1.3em;
-    font-weight: 200;
-    letter-spacing: 0.1em;
-  }
-  .details>p {
-    font-family: sans-serif;
-    font-size: 1em;
-    font-weight: 200;
-  }
-  
-  .image{
-    position: relative;
-    z-index: 2;
-    width: 85%;
-    height: 250px;
-    margin: 0 auto -10em;
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.24);
-    transition: all ease-in .15s;
-  }
-  .wrapper:hover .image{
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    transform: translate(0px, -3px) scale(1.02);
-  }
-    
-.i1{
-    background-image: url(../images/Dinarobin-Beachcomber.jpg);;
+.i1 {
+  background-image: url(../images/Dinarobin-Beachcomber.jpg);
 }
+
 .i2 {
-    background-image: url(../images/Sunrise-Attitude.jpg);
+  background-image: url(../images/Sunrise-Attitude.jpg);
 }
+
 .i3 {
-    background-image: url(../images/The-Bay.jpg);
+  background-image: url(../images/The-Bay.jpg);
 }
+
 .i4 {
-    background-image: url(../images/Victoria.jpg);
+  background-image: url(../images/Victoria.jpg);
 }
+
 .i5 {
-    background-image: url(../images/JW-Marriott.jpg);
+  background-image: url(../images/JW-Marriott.jpg);
 }
+
 .i6 {
-    background-image: url(../images/Le-Meridien.jpg);
+  background-image: url(../images/Le-Meridien.jpg);
 }
-  
-  @media screen and (max-width: 1000px) {
-    .wrapper{
-      width: 47%;
-    }
-  }
-  @media screen and(max-width:700px){
-    .wrapper{
-      float: none;
-      width: 70%;
-      margin: 1em auto;
-    }
-  }
 
-
-
-
-  .keynotes-modal .card {
-    display: flex;
+@media only screen and (max-width: 975px) {
+  .header__title {
     flex-direction: column;
-    background: white;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    transition: all 0.3s;
-  }
-  .keynotes-modal .card:hover {
-    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: auto;
   }
 
-  .keynotes-modal .card__content{
-    display: flex;
-    flex-direction: row;
+  .header__logo {
+    text-align: center;
   }
-  .keynotes-modal .card nav {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    font-family: "Century Gothic";
-    color: #727272;
-    text-transform: uppercase;
+
+  .navbar {
+    display: none;
+  }
+
+  .navbar-mobile {
+    display: contents;
+  }
+
+  .main-background {
     padding: 1rem;
-    border-bottom: 2px solid #efefef;
-  }
-  
-  .keynotes-modal .card .photo {
-    padding: 3rem;
-    justify-self: center;
-    align-self: center;
-  }
-  
-  .keynotes-modal .card .description {
-    padding: 3rem;
-    border-left: 2px solid #efefef;
   }
 
-  .keynotes-modal .card .description h1 {
-    color: #515151;
-    font-weight: 300;
-    padding-top: 15px;
-    margin: 0;
-    font-size: 30px;
-    font-weight: 300;
-  }
-  .keynotes-modal .card .description h2 {
-    color: #515151;
-    margin: 0;
-    font-weight: 500;
-    font-size: 2rem;
-  }
-  .keynotes-modal .card .description h4 {
-    margin: 0;
-    color: #727272;
-    font-weight: 500;
-    font-size: 1.6rem;
-  }
-  .keynotes-modal .card .description p {
-    font-size: 1.5rem;
-    line-height: 20px;
-    color: #727272;
-    padding: 20px 0;
-    margin: 0;
+  .content__main,
+  .content__venue {
+    padding: 2rem;
   }
 
-
-  @media only screen and (max-width: 975px) {
-    .header__title{
-        flex-direction: column;
-        height: auto;
-    }
-
-    .header__logo{
-        text-align: center;
-    }
-
-    .navbar{
-        display: none;
-    }
-    .navbar-mobile{
-        display: contents;
-    }
-    .main-background{
-        padding: 1rem;
-    }
-    .content__main, .content_venue{
-        padding: 2rem;
-    }
-    .keynotes-modal .card__content{
-        flex-direction: column;
-    }
-    .keynotes-modal{
-        height: auto;
-        overflow-x: hidden;
-        overflow-y: auto;
-        align-items:unset;
-    }
-    .content__keynotes{
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-        justify-content: unset;
-    }
-    .content__accommodation{
-        flex-wrap: nowrap;
-        overflow-x: scroll;
-        justify-content: unset;
-    }
-
-    .content__keynotes, .content__main, .content__title h2{
-        font-size: 3rem; 
-    }
-
-    #map{
-        height: 50rem;
-    }
-
-    .map-popup{
-        flex-direction: column;
-    }
-}
-
-#map{
-    height: 100rem;
-    width: 100%;
-    border-radius: 16px;
-    margin-bottom: 12rem;
-}
-
-.map-popup{
-    display: flex;
-}
-
-.map-popup img{
-    height: 30rem;
-    width: 30rem;
-    margin: 1rem;
-}
-
-.map-popup_details{
-    display: flex;
+  .keynotes-modal .card__content {
     flex-direction: column;
+  }
+
+  .keynotes-moda {
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    align-items: unset;
+  }
+
+  .content__keynotes {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: unset;
+  }
+
+  .content__accommodation {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    justify-content: unset;
+  }
+
+  .content__keynotes,
+  .content__main,
+  .content__title h2 {
+    font-size: 3rem;
+  }
+
+  #map {
+    height: 50rem;
+  }
+
+  .map-popup {
+    flex-direction: column;
+  }
 }
 
-.map-popup h3, a, p{
-    padding: 1rem;
-    
+#map {
+  height: 100rem;
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 12rem;
+}
+
+.map-popup {
+  display: flex;
+}
+
+.map-popup img {
+  height: 30rem;
+  width: 30rem;
+  margin: 1rem;
+}
+
+.map-popup_details {
+  display: flex;
+  flex-direction: column;
+}
+
+.map-popup h3,
+a,
+p {
+  padding: 1rem;
 }
