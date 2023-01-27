@@ -331,6 +331,7 @@
   align-items: center;
   white-space: nowrap;
   padding-left: 20px;
+  color: var(--C6);
 }
 
 .keynotes-modal:target {

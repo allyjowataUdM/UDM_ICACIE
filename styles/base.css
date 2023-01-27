@@ -24,6 +24,16 @@ html {
   scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-track {
+  background: #ececec;
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--C1);
+}
+
 @keyframes transitionSlideIn {
   from {
     opacity: 0;
