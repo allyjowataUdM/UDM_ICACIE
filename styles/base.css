@@ -34,6 +34,10 @@ body::-webkit-scrollbar-thumb {
   background: var(--C1);
 }
 
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--C2);
+}
+
 @keyframes transitionSlideIn {
   from {
     opacity: 0;
