@@ -2,6 +2,15 @@
   background-color: var(--C2);
 }
 
+.header__title {
+  font-family: "Century Gothic";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20rem;
+}
+
+/*Navigation bar */
 .navbar {
   display: flex;
   justify-content: center;
@@ -11,14 +20,6 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-}
-
-.header__title {
-  font-family: "Century Gothic";
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 20rem;
 }
 
 .navbar-mobile {
@@ -61,10 +62,6 @@
   text-align: center;
 }
 
-.content__title a{
-  color: whitesmoke;
-}
-
 .content__keynotes {
   display: flex;
   flex-wrap: wrap;
@@ -74,7 +71,8 @@
   animation: transitionFadeIn 1500ms ease;
 }
 
-.content__accommodation, .content_sightseeing {
+.content__accommodation,
+.content_sightseeing {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -118,6 +116,7 @@
   transition: all 3s linear 0s;
 }
 
+/*ticker news bar*/
 .ticker {
   display: flex;
   overflow: hidden;
@@ -126,13 +125,14 @@
 
 .ticker__news-item {
   display: flex;
-  padding-left: 90%;
+  padding-left: 100%;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-name: news-ticker;
   animation-duration: 30s;
 }
 
+/*modal for keynotes speakers more details*/
 .keynotes-modal {
   display: flex;
   align-items: center;
@@ -161,42 +161,7 @@
   backdrop-filter: blur(5px);
 }
 
-.image {
-  position: relative;
-  z-index: 2;
-  width: 85%;
-  height: 250px;
-  margin: 0 auto -10em;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.24);
-  transition: all ease-in 0.15s;
-}
-
-.i1 {
-  background-image: url(../images/Dinarobin-Beachcomber.jpg);
-}
-
-.i2 {
-  background-image: url(../images/Sunrise-Attitude.jpg);
-}
-
-.i3 {
-  background-image: url(../images/The-Bay.jpg);
-}
-
-.i4 {
-  background-image: url(../images/Victoria.jpg);
-}
-
-.i5 {
-  background-image: url(../images/JW-Marriott.jpg);
-}
-
-.i6 {
-  background-image: url(../images/Le-Meridien.jpg);
-}
-
+/*Responsive css*/
 @media only screen and (max-width: 975px) {
   .header__title {
     flex-direction: column;
@@ -220,12 +185,9 @@
   }
 
   .content__main,
-  .content__venue {
+  .content__venue,
+  .content__travel {
     padding: 2rem;
-  }
-
-  .keynotes-modal .card__content {
-    flex-direction: column;
   }
 
   .keynotes-modal {
@@ -249,6 +211,7 @@
 
   .content__keynotes,
   .content__main,
+  .content__travel,
   .content__title h2 {
     font-size: 3rem;
   }
@@ -260,11 +223,12 @@
   .map-popup {
     flex-direction: column;
   }
-  .footer__content{
+  .footer__content {
     flex-direction: column;
   }
 }
 
+/*Sightseeing map css*/
 #map {
   height: 60rem;
   width: 80%;
@@ -293,20 +257,20 @@ p {
   padding: 1rem;
 }
 
-
-.footer{
+/*footer*/
+.footer {
   display: flex;
   flex-direction: column;
   height: auto;
 }
 
-.footer__content{
+.footer__content {
   display: flex;
   height: auto;
   background-color: var(--C2);
 }
 
-.footer__content-left{
+.footer__content-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -315,27 +279,7 @@ p {
   flex: 1;
 }
 
-.footer__content-left .logo{
-  width: 25rem;
-  margin: 3rem 2rem 1rem 0;
-}
-
-.footer__content-left .social-media {
-  margin: 0 0 3rem 0;
-}
-
-.footer__content-left .social-media a {
-  color: whitesmoke;
-  margin: 1rem;
-  text-decoration: none;
-  transition: 0.3s linear;
-}
-
-.footer__content-left .social-media a:hover {
-  color: var(--C6);
-}
-
-.footer__content-middle{
+.footer__content-middle {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -345,29 +289,7 @@ p {
   flex: 1.5;
 }
 
-.footer__title h1{
-  font-family: "Century Gothic";
-  color: whitesmoke;
-  font-size: 3rem;
-  margin: 2rem 0 0 0; 
-}
-
-.footer__title h2{
-  font-family: "Century Gothic";
-  color: whitesmoke;
-  font-size: 2rem;
-  margin: 2rem 0 2rem 0; 
-}
-
-.footer__content-middle .footer__sponsor-logo img{
-  width: 15rem;
-  background-color: white;
-  margin: 2rem;
-  padding: 2rem;
-  border-radius: 1rem;
-}
-
-.footer__content-right{
+.footer__content-right {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -376,64 +298,3 @@ p {
   height: auto;
   flex: 1;
 }
-
-.footer__content-right .register{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 2rem 0;
-}
-
-.register .register-form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem 4rem;
-}
-
-.register-form .textbox {
-  padding: 13px 40px;
-  margin: 1rem 0;
-  font-size: 15px;
-  color: #3a3a3a;
-  background: #ddd;
-  border: none;
-  font-weight: 700;
-  outline: none;
-  border-radius: 30px;
-  min-width: 35rem;
-}
-
-.register-form .button {
-  padding: 13px 40px;
-  margin: 1rem 0;
-  font-size: 16px;
-  color: whitesmoke;
-  background: var(--C6);
-  border: none;
-  font-weight: 700;
-  outline: none;
-  border-radius: 30px;
-  margin-left: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.footer__text{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  background-color: var(--C1);
-}
-
-.footer__text p{
-  color: whitesmoke;
-  padding: 2rem;
-}
-
-
-
-
